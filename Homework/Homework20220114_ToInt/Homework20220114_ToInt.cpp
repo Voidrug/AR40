@@ -24,7 +24,7 @@ int ToInt(const char* _Left)
 
 int main()
 {
-	int Value = ToInt("15815");
+	int Value = ToInt("150815");
 
 	int a = 0;
 
