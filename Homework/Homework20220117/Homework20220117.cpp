@@ -62,7 +62,7 @@ int CountLast(const char* _Text, int _End, const char* _FindStr)
 
         for (int k = 0; k < PrevCount; ++k)
         {
-            if (_Text[i - k] == _FindStr[PrevCount - k - 1])
+            if (_Text[i - k] == _FindStr[PrevCount - 1 - k])
             {
                 TrueCount += 1;
             }
