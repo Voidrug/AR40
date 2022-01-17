@@ -32,9 +32,9 @@ void TextChange(char* _Text, const char* _Prev, const char* _Next)
 
 		if (TrueCount == PrevCount)
 		{
-			for (int j = 0; j < NextCount; j++)
+			for (int i = 0; i < NextCount; i++)
 			{
-				_Text[TextCount + j] = _Next[j];
+				_Text[TextCount + i] = _Next[i];
 			}
 
 			TextCount += PrevCount;
