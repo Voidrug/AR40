@@ -41,13 +41,13 @@ void TextChange(char* _Text, const char* _Prev, const char* _Next)
 					_Text[TextCount+j] = _Next[j];
 				}
 
-				// 변경된 글자수만큼 칸수를 옮겨서 시작하기 위해 변수를 더해줌
+				// 변경된 글자수만큼 칸수를 옮겨서 시작하기 위해 값을 더해줌
 				TextCount += PrevCount;
 			}
 			
 		}
 
-		//안쪽이 실행하든 안하든 다음 글자를 확인하기 위해 변수를 더해줌
+		//안쪽이 실행하든 안하든 칸수를 옮겨 다음 글자를 확인하기 위해 값을 더해줌
 		TextCount += 1;
 
 	}
