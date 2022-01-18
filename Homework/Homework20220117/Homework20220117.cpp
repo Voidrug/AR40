@@ -20,16 +20,6 @@ int CountFirst(const char* _Text, int _Start, const char* _FindStr)
     int TextCount = StringLen(_Text);
     int PrevCount = StringLen(_FindStr);
     int TrueCount = 0;
-    
-    while (0 != _FindStr[PrevCount])
-    {
-        PrevCount += 1;      
-    }
-
-    while (0 != _Text[TextCount])
-    {
-        TextCount += 1;
-    }
 
     for (int i = _Start; i < TextCount; ++i)
     {
