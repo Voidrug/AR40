@@ -19,11 +19,10 @@ int CountFirst(const char* _Text, int _Start, const char* _FindStr)
 {
     int TextCount = StringLen(_Text);
     int PrevCount = StringLen(_FindStr);
-    int TrueCount = 0;
 
     for (int i = _Start; i < TextCount; ++i)
     {
-        TrueCount = 0;
+        int TrueCount = 0;
         
         for (int k = 0; k < PrevCount; ++k)
         {
@@ -46,11 +45,10 @@ int CountLast(const char* _Text, int _End, const char* _FindStr)
 {
     int TextCount = StringLen(_Text);
     int PrevCount = StringLen(_FindStr);
-    int TrueCount = 0;
 
     for (int i = TextCount - _End; i >= 0; --i)
     {
-        TrueCount = 0;
+        int TrueCount = 0;
 
         for (int k = 0; k < PrevCount; ++k)
         {
