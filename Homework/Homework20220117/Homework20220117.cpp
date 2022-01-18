@@ -3,10 +3,22 @@
 
 #include <iostream>
 
+int StringLen(const char*_StringLen)
+{
+    int Count = 0;
+
+    while (0 != _StringLen[Count])
+    {
+        Count += 1;
+    }
+
+    return Count;
+}
+
 int CountFirst(const char* _Text, int _Start, const char* _FindStr)
 {
-    int TextCount = 0;
-    int PrevCount = 0;
+    int TextCount = StringLen(_Text);
+    int PrevCount = StringLen(_FindStr);
     int TrueCount = 0;
     
     while (0 != _FindStr[PrevCount])
@@ -42,19 +54,9 @@ int CountFirst(const char* _Text, int _Start, const char* _FindStr)
 
 int CountLast(const char* _Text, int _End, const char* _FindStr)
 {
-    int TextCount = 0;
-    int PrevCount = 0;
+    int TextCount = StringLen(_Text);
+    int PrevCount = StringLen(_FindStr);
     int TrueCount = 0;
-
-    while (0 != _FindStr[PrevCount])
-    {
-        PrevCount += 1;
-    }
-
-    while (0 != _Text[TextCount])
-    {
-        TextCount += 1;
-    }
 
     for (int i = TextCount - _End; i >= 0; --i)
     {
@@ -62,7 +64,7 @@ int CountLast(const char* _Text, int _End, const char* _FindStr)
 
         for (int k = 0; k < PrevCount; ++k)
         {
-            if (_Text[i - k] == _FindStr[PrevCount - 1 - k])
+            if (_Text[i + k] == _FindStr[k])
             {
                 TrueCount += 1;
             }
@@ -81,13 +83,13 @@ int main()
 {
 
     {
-        int Count = CountFirst("aaa eee tt fjkdld eeee", 15, "eee");
+        int Count = CountFirst("aaa eee tt fjkdld feee", 15, "eee");
 
         int a = 0;
     }
 
     {
-        int Count = CountLast("aaa eee asdfdfasd eeedfs", 5, "eee");
+        int Count = CountLast("aaa eee asdfdfasd edfs", 5, "eee");
 
         int a = 0;
     }
