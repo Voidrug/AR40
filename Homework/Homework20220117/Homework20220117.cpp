@@ -71,6 +71,7 @@ int main()
 {
 
     {
+
         int Count = CountFirst("aaa eee tt fjkdld feee", 15, "eee");
 
         int a = 0;
