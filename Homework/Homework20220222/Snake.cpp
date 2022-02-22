@@ -55,6 +55,9 @@ int main()
 	ConsoleScreen::Destroy();
 	{
 		delete NewBody;
+		NewBody = nullptr;
+
 		delete NewHead;
+		NewHead = nullptr;
 	}
 }
