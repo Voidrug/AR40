@@ -18,17 +18,11 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Tester.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Tester.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{57e4cc35-239c-44da-9259-dc00709b86d7}</ProjectGuid>
-    <RootNamespace>Test</RootNamespace>
+    <ProjectGuid>{050ba1f7-93e2-48d6-ad59-09ec8ef82049}</ProjectGuid>
+    <RootNamespace>Snake</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -144,6 +138,51 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Body.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Engine\ConsoleMath.cpp" />
+    <ClCompile Include="Engine\ConsoleObject.cpp" />
+    <ClCompile Include="Engine\ConsoleRandom.cpp" />
+    <ClCompile Include="Engine\ConsoleScreen.cpp" />
+    <ClCompile Include="GameBlock.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="GlobalGameLogic.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Head.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Snake.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Body.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Engine\ConsoleMath.h" />
+    <ClInclude Include="Engine\ConsoleObject.h" />
+    <ClInclude Include="Engine\ConsoleRandom.h" />
+    <ClInclude Include="Engine\ConsoleScreen.h" />
+    <ClInclude Include="GameBlock.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="GlobalGameLogic.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Head.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
